@@ -1,5 +1,5 @@
 //Declare the server url
-var serverUrl="http://localhost:8080";
+var serverUrl="http://localhost:8080/ajax/";
 
 //Add the click event to the button
 window.onload = function() {

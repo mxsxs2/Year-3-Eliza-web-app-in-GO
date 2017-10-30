@@ -33,6 +33,9 @@ function sendRequest(){
                 }
                 addBubble(data.Answer,"bot");
                 textarea.value="";
+                //Scroll to bottom of the chat window
+                var chatWindow = document.getElementById("messagesContainer");
+                chatWindow.scrollTop = chatWindow.scrollHeight;
             }
         } else {
             // We reached our target server, but it returned an error
@@ -95,9 +98,9 @@ function sendandreceivedAnimation(){
     if(text.classList.contains("hidden")){
         text.classList.remove("hidden");
         loading.classList.add("hidden");
-        textarea.addAttribute("disabled");
+        //textarea.disabled=true;
     }else{
-        textarea.removeAttribute("disabled");
+        textarea.disabled=false;
         text.classList.add("hidden");
         loading.classList.remove("hidden");
         

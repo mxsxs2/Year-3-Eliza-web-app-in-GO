@@ -29,3 +29,12 @@ At the moment Eliza's main feature is not implemented, Therefore the only thing 
 ### Simple chat
 The chat is a simple "window" in the broswer where the user can send a message to Eliza and eliza answers.
 It is written in HTML and JavaScript. The communication with Eliza is happening throgh AJAX calls which delivers JSON responses/request.
+
+
+#References
+* What is eliza - https://en.wikipedia.org/wiki/ELIZA
+* AIML - http://www.alicebot.org/aiml.html
+* AIML Parser - https://github.com/eduardonunesp/goaiml
+* Simple webserver - https://github.com/mxsxs2/Go-Problem-set-Web-applications
+* JSON - https://blog.golang.org/json-and-go
+* Original Eliza AIML - https://github.com/massyn/ELIZA

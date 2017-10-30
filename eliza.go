@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/eduardonunesp/goaiml"
+	"github.com/mxsxs2/goaiml"
 )
 
 //Function used to initialize eliza

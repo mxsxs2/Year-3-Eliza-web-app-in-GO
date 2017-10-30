@@ -7,34 +7,12 @@
 
 <aiml version="1.0">
 <category>
-      <pattern>(YOU|YOUR)? * NAME *</pattern>
-      <template>
+	<pattern>What * your name*</pattern>
+	<template>
 	  	<random>
         	<li>My friends call me <bot name="name"/></li>
 			<li>My name is <bot name="name"/></li>
 		</random>
-      </template>
-</category>
-
-<category>
-      <pattern><bot name="name"/> DO YOU *</pattern>
-      <template>
-         <random>
-		 	<li>No i do not <star/></li>
-			<li>I do not <star/></li>
-			<li>Yes i do <star/></li>
-			<li>I do <star/></li>
-		 </random>
-      </template>
-</category>
-
-<category>
-      <pattern><bot name="name"/> ARE YOU *</pattern>
-      <template>
-         <random>
-		 	<li>No i am not <star/></li>
-			<li>Yes i am <star/></li>
-		 </random>
       </template>
 </category>
 
@@ -231,249 +209,6 @@
 </category>
 
 <category>
-	<pattern>HELLO</pattern>
-	<template>
-		<random>
-			<li>How do you do. Please state your problem..</li>
-			<li>Hi. What seems to be your problem?.</li>
-		</random>
-	</template>
-</category>
-
-<category>
-	<pattern>HI</pattern>
-	<template><srai>hello</srai></template>
-</category>
-
-<category>
-	<pattern>HOWDY</pattern>
-	<template><srai>hello</srai></template>
-</category>
-
-<category>
-	<pattern>HOLA</pattern>
-	<template><srai>hello</srai></template>
-</category>
-
-<category>
-	<pattern>HAI</pattern>
-	<template><srai>hello</srai></template>
-</category>
-
-<category>
-	<pattern>YO</pattern>
-	<template><srai>hello</srai></template>
-</category>
-
-<category>
-	<pattern>HELLO *</pattern>
-	<template><srai>hello</srai></template>
-</category>
-
-<category>
-	<pattern>HI</pattern>
-	<template><srai>hello</srai></template>
-</category>
-
-<category>
-	<pattern>HOWDY</pattern>
-	<template><srai>hello</srai></template>
-</category>
-
-<category>
-	<pattern>HOLA</pattern>
-	<template><srai>hello</srai></template>
-</category>
-
-<category>
-	<pattern>HAI</pattern>
-	<template><srai>hello</srai></template>
-</category>
-
-<category>
-	<pattern>YO</pattern>
-	<template><srai>hello</srai></template>
-</category>
-
-<category>
-	<pattern>COMPUTER</pattern>
-	<template>
-		<random>
-			<li>Do computers worry you?.</li>
-			<li>Why do you mention computers?.</li>
-			<li>What do you think machines have to do with your problem?.</li>
-			<li>Don't you think computers can help people?.</li>
-			<li>What about machines worries you?.</li>
-			<li>What do </li>
-		</random>
-	</template>
-</category>
-
-<category>
-	<pattern>COMPUTER *</pattern>
-	<template><srai>computer</srai></template>
-</category>
-
-<category>
-	<pattern>* COMPUTER</pattern>
-	<template><srai>computer</srai></template>
-</category>
-
-<category>
-	<pattern>* COMPUTER *</pattern>
-	<template><srai>computer</srai></template>
-</category>
-
-<category>
-	<pattern>AM I *</pattern>
-	<template>
-		<random>
-			<li>Do you believe you are <star/>?.</li>
-			<li>Would you want to be <star/>?.</li>
-			<li>Do you wish I would tell you you are <star/>?.</li>
-			<li>What would it mean if you were <star/>?.</li>
-		</random>
-	</template>
-</category>
-
-<category>
-	<pattern>ARE YOU *</pattern>
-	<template>
-		<random>
-			<li>Are you interested in whether I am <star/> or not?.</li>
-			<li>Would you prefer if I weren't <star/>?.</li>
-			<li>Perhaps I am <star/> in your fantasies..</li>
-			<li>Do you sometimes think I am <star/>?.</li>
-			<li>Would it matter to you?.</li>
-			<li>What if </li>
-		</random>
-	</template>
-</category>
-
-<category>
-	<pattern>YOU ARE *</pattern>
-	<template>
-		<random>
-			<li>What makes you think I am <star/>?.</li>
-			<li>Does it please you to believe I am <star/>?.</li>
-			<li>Do you sometimes wish you were <star/>?.</li>
-			<li>Perhaps you would like to be <star/>..</li>
-		</random>
-	</template>
-</category>
-
-<category>
-	<pattern>* ARE *</pattern>
-	<template>
-		<random>
-			<li>Did you think they might not be <get name="star2" />?.</li>
-			<li>Would you like it if they were not <get name="star2" />?.</li>
-			<li>What if they were not <get name="star2" />?.</li>
-			<li>Are they always <get name="star2" />?.</li>
-			<li>Are you positive they are <get name="star2" />?.</li>
-		</random>
-	</template>
-</category>
-
-<category>
-	<pattern>YOUR *</pattern>
-	<template>
-		<random>
-			<li>Why are you concerned over my <star/>?.</li>
-			<li>What about your own <star/>?.</li>
-			<li>Are you worried about someone else's <star/>?.</li>
-			<li>Really, my <star/>?.</li>
-			<li>What makes you think of my <star/>?.</li>
-			<li>Do you want my <star/>?.</li>
-		</random>
-	</template>
-</category>
-
-<category>
-	<pattern>* YOUR *</pattern>
-	<template><srai>your <get name="star2" /></srai></template>
-</category>
-
-<category>
-	<pattern>WAS I *</pattern>
-	<template>
-		<random>
-			<li>What if you were <star/>?.</li>
-			<li>Do you think you were <star/>?.</li>
-			<li>Were you <star/>?.</li>
-			<li>What would it mean if you were <star/>?.</li>
-			<li>What does '<star/>' suggest to you?.</li>
-		</random>
-	</template>
-</category>
-
-<category>
-	<pattern>I WAS *</pattern>
-	<template>
-		<random>
-			<li>Were you really?.</li>
-			<li>Why do you tell me you were <star/> now?.</li>
-			<li>Perhaps I already know you were <star/>..</li>
-		</random>
-	</template>
-</category>
-
-<category>
-	<pattern>WAS YOU *</pattern>
-	<template>
-		<random>
-			<li>Would you like to believe I was <star/>?.</li>
-			<li>What suggests that I was <star/>?.</li>
-			<li>What do you think?.</li>
-			<li>Perhaps I was <star/>..</li>
-			<li>What if I had been <star/>?.</li>
-		</random>
-	</template>
-</category>
-
-<category>
-	<pattern>* WAS YOU *</pattern>
-	<template><srai>was you <get name="star2" /></srai></template>
-</category>
-
-<category>
-	<pattern>I DESIRE *</pattern>
-	<template><srai>i want <star/></srai></template>
-</category>
-
-<category>
-	<pattern>I NEED *</pattern>
-	<template><srai>i want <star/></srai></template>
-</category>
-
-<category>
-	<pattern>I WANT *</pattern>
-	<template>
-		<random>
-			<li>What would it mean to you if you got <star/>?.</li>
-			<li>Why do you want <star/>?.</li>
-			<li>Suppose you got <star/> soon..</li>
-			<li>What if you never got <star/>?.</li>
-			<li>What would getting <star/> mean to you?.</li>
-			<li>What does wanting <star/> hav</li>
-		</random>
-	</template>
-</category>
-
-<category>
-	<pattern>I AM *</pattern>
-	<template>
-		<random>
-			<li>Is it because you are <star/> that you came to me?.</li>
-			<li>How long have you been <star/>?.</li>
-			<li>Do you believe it is normal to be <star/>?.</li>
-			<li>Do you enjoy being <star/>?.</li>
-			<li>Do you know anyone else who is <star/>?.</li>
-		</random>
-	</template>
-</category>
-
-<category>
 	<pattern>I CAN NOT *</pattern>
 	<template>
 		<random>
@@ -627,23 +362,6 @@
 <category>
 	<pattern>I THINK *</pattern>
 	<template><srai>i believe <star/></srai></template>
-</category>
-
-<category>
-	<pattern>YOU *</pattern>
-	<template>
-		<random>
-			<li>We were discussing you -- not me..</li>
-			<li>Oh, I <star/>?.</li>
-			<li>You're not really talking about me -- are you?.</li>
-			<li>What are your feelings now?.</li>
-		</random>
-	</template>
-</category>
-
-<category>
-	<pattern>* YOU *</pattern>
-	<template><srai>you <star/></srai></template>
 </category>
 
 <category>
@@ -1175,18 +893,6 @@
 </category>
 
 <category>
-	<pattern>I AM PISSED</pattern>
-	<template>
-		<random>
-			<li>I am sorry to hear that you are pissed..</li>
-			<li>Do you think coming here will help you not to be pissed?.</li>
-			<li>I'm sure it's not pleasant to be pissed..</li>
-			<li>Can you explain what made you pissed?.</li>
-		</random>
-	</template>
-</category>
-
-<category>
 	<pattern>I AM DEPRESSED</pattern>
 	<template>
 		<random>
@@ -1219,11 +925,6 @@
 </category>
 
 <category>
-	<pattern>I AM PISSED *</pattern>
-	<template><srai>i am pissed</srai></template>
-</category>
-
-<category>
 	<pattern>I AM DEPRESSED *</pattern>
 	<template><srai>i am depressed</srai></template>
 </category>
@@ -1241,6 +942,284 @@
 <category>
 	<pattern>ME NEITHER</pattern>
 	<template>Let's continue exploring this issue.</template>
+</category>
+
+<category>
+	<pattern>COMPUTER</pattern>
+	<template>
+		<random>
+			<li>Do computers worry you?.</li>
+			<li>Why do you mention computers?.</li>
+			<li>What do you think machines have to do with your problem?.</li>
+			<li>Don't you think computers can help people?.</li>
+			<li>What about machines worries you?.</li>
+			<li>What do </li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>COMPUTER *</pattern>
+	<template><srai>computer</srai></template>
+</category>
+
+<category>
+	<pattern>* COMPUTER</pattern>
+	<template><srai>computer</srai></template>
+</category>
+
+<category>
+	<pattern>* COMPUTER *</pattern>
+	<template><srai>computer</srai></template>
+</category>
+
+<category>
+	<pattern>AM I *</pattern>
+	<template>
+		<random>
+			<li>Do you believe you are <star/>?.</li>
+			<li>Would you want to be <star/>?.</li>
+			<li>Do you wish I would tell you you are <star/>?.</li>
+			<li>What would it mean if you were <star/>?.</li>
+		</random>
+	</template>
+</category>
+
+<category>
+      <pattern>DO YOU *</pattern>
+	  <template>
+         <random>
+		 	<li>No i do not <star/></li>
+			<li>I do not <star/></li>
+			<li>Yes i do <star/></li>
+			<li>I do <star/></li>
+		 </random>
+      </template>
+</category>
+
+<category>
+      <pattern><bot name="name"/> DO YOU *</pattern>
+	  <template><srai>DO YOU *</srai></template>
+</category>
+<category>
+      <pattern><bot name="name"/> ARE YOU *</pattern>
+      <template><srai>ARE YOU *</srai></template>
+</category>
+<category>
+	<pattern>ARE YOU *</pattern>
+	<template>
+		<random>
+			<li>Are you interested in whether I am <star/> or not?.</li>
+			<li>Would you prefer if I weren't <star/>?.</li>
+			<li>Perhaps I am <star/> in your fantasies..</li>
+			<li>Do you sometimes think I am <star/>?.</li>
+			<li>Would it matter to you?.</li>
+			<li>What if </li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>YOU ARE *</pattern>
+	<template>
+		<random>
+			<li>What makes you think I am <star/>?.</li>
+			<li>Does it please you to believe I am <star/>?.</li>
+			<li>Do you sometimes wish you were <star/>?.</li>
+			<li>Perhaps you would like to be <star/>..</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>* ARE *</pattern>
+	<template>
+		<random>
+			<li>Did you think they might not be <get name="star2" />?.</li>
+			<li>Would you like it if they were not <get name="star2" />?.</li>
+			<li>What if they were not <get name="star2" />?.</li>
+			<li>Are they always <get name="star2" />?.</li>
+			<li>Are you positive they are <get name="star2" />?.</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>YOUR *</pattern>
+	<template>
+		<random>
+			<li>Why are you concerned over my <star/>?.</li>
+			<li>What about your own <star/>?.</li>
+			<li>Are you worried about someone else's <star/>?.</li>
+			<li>Really, my <star/>?.</li>
+			<li>What makes you think of my <star/>?.</li>
+			<li>Do you want my <star/>?.</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>* YOUR *</pattern>
+	<template><srai>your <get name="star2" /></srai></template>
+</category>
+
+<category>
+	<pattern>WAS I *</pattern>
+	<template>
+		<random>
+			<li>What if you were <star/>?.</li>
+			<li>Do you think you were <star/>?.</li>
+			<li>Were you <star/>?.</li>
+			<li>What would it mean if you were <star/>?.</li>
+			<li>What does '<star/>' suggest to you?.</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>I WAS *</pattern>
+	<template>
+		<random>
+			<li>Were you really?.</li>
+			<li>Why do you tell me you were <star/> now?.</li>
+			<li>Perhaps I already know you were <star/>..</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>WAS YOU *</pattern>
+	<template>
+		<random>
+			<li>Would you like to believe I was <star/>?.</li>
+			<li>What suggests that I was <star/>?.</li>
+			<li>What do you think?.</li>
+			<li>Perhaps I was <star/>..</li>
+			<li>What if I had been <star/>?.</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>* WAS YOU *</pattern>
+	<template><srai>was you <get name="star2" /></srai></template>
+</category>
+
+<category>
+	<pattern>I DESIRE *</pattern>
+	<template><srai>i want <star/></srai></template>
+</category>
+
+<category>
+	<pattern>I NEED *</pattern>
+	<template><srai>i want <star/></srai></template>
+</category>
+
+<category>
+	<pattern>I WANT *</pattern>
+	<template>
+		<random>
+			<li>What would it mean to you if you got <star/>?.</li>
+			<li>Why do you want <star/>?.</li>
+			<li>Suppose you got <star/> soon..</li>
+			<li>What if you never got <star/>?.</li>
+			<li>What would getting <star/> mean to you?.</li>
+			<li>What does wanting <star/> hav</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>I AM *</pattern>
+	<template>
+		<random>
+			<li>Is it because you are <star/> that you came to me?.</li>
+			<li>How long have you been <star/>?.</li>
+			<li>Do you believe it is normal to be <star/>?.</li>
+			<li>Do you enjoy being <star/>?.</li>
+			<li>Do you know anyone else who is <star/>?.</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>YOU *</pattern>
+	<template>
+		<random>
+			<li>We were discussing you -- not me..</li>
+			<li>Oh, I <star/>?.</li>
+			<li>You're not really talking about me -- are you?.</li>
+			<li>What are your feelings now?.</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>* YOU *</pattern>
+	<template><srai>you <star/></srai></template>
+</category>
+<category>
+	<pattern>HELLO</pattern>
+	<template>
+		<random>
+			<li>How do you do. Please state your problem..</li>
+			<li>Hi. What seems to be your problem?.</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>HI</pattern>
+	<template><srai>hello</srai></template>
+</category>
+
+<category>
+	<pattern>HOWDY</pattern>
+	<template><srai>hello</srai></template>
+</category>
+
+<category>
+	<pattern>HOLA</pattern>
+	<template><srai>hello</srai></template>
+</category>
+
+<category>
+	<pattern>HAI</pattern>
+	<template><srai>hello</srai></template>
+</category>
+
+<category>
+	<pattern>YO</pattern>
+	<template><srai>hello</srai></template>
+</category>
+
+<category>
+	<pattern>HELLO *</pattern>
+	<template><srai>hello</srai></template>
+</category>
+
+<category>
+	<pattern>HI</pattern>
+	<template><srai>hello</srai></template>
+</category>
+
+<category>
+	<pattern>HOWDY</pattern>
+	<template><srai>hello</srai></template>
+</category>
+
+<category>
+	<pattern>HOLA</pattern>
+	<template><srai>hello</srai></template>
+</category>
+
+<category>
+	<pattern>HAI</pattern>
+	<template><srai>hello</srai></template>
+</category>
+
+<category>
+	<pattern>YO</pattern>
+	<template><srai>hello</srai></template>
 </category>
 <category>
 	<pattern>*</pattern>

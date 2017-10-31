@@ -83,7 +83,8 @@ func main() {
 	http.HandleFunc("/favicon.ico", serveFavicon)
 	//Add the handler for the ajax
 	http.HandleFunc("/ajax/", ajaxHandler)
+	fmt.Println("Listen started on port 8080")
 	//Listen on port 8080
 	http.ListenAndServe(":8080", nil)
-	fmt.Println("Listen started on port 8080")
+	
 }

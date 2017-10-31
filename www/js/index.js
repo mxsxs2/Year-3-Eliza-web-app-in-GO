@@ -5,7 +5,7 @@ var serverUrl="http://localhost:8080/ajax/";
 window.onload = function() {
     document.getElementById("sendButton").addEventListener('click',sendButtonClick);
     //Start conversation
-    sendButtonClick();
+    //sendButtonClick();
 }
 
 function sendRequest(){

@@ -28,7 +28,6 @@ function sendRequest(){
     
     //Receive the response
     request.onload = function() {
-        console.log(request);
         if (request.status >= 200 && request.status < 400) {
             //Parse data
             var data = JSON.parse(request.responseText);
@@ -36,12 +35,22 @@ function sendRequest(){
                 //Add the user bubble
                 if(textarea.value!="intitial_greetings"){
                     addBubble(textarea.value,"user");
+                    //Empty the text area
+                    textarea.value="";
                 }
-                addBubble(data.Answer,"bot");
-                textarea.value="";
+
+                //Wait 500ms to imitate typing
+                setTimeout(function(){
+                    //Add the chat bubble from the bot
+                    addBubble(data.Answer,"bot");
+                    //Empty the text area
+                    textarea.value="";
+                    //Scroll to bottom of the chat window
+                    scrollToBottom()
+                },500)
+
                 //Scroll to bottom of the chat window
-                var chatWindow = document.getElementById("messagesContainer");
-                chatWindow.scrollTop = chatWindow.scrollHeight;
+                scrollToBottom()
             }
         } else {
             // We reached our target server, but it returned an error
@@ -60,6 +69,14 @@ function sendRequest(){
 
     //Send the data
     request.send(JSON.stringify({"Question":textarea.value}));
+}
+
+//Function used to roll to the bottom of the chat window
+function scrollToBottom(){
+    //Get the window
+    var chatWindow = document.getElementById("messagesContainer");
+    //Scroll to bottom
+    chatWindow.scrollTop = chatWindow.scrollHeight;
 }
 //Function used to add a chat bubble
 function addBubble(text,owner){

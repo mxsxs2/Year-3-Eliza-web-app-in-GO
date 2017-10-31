@@ -1,5 +1,5 @@
 # Eliza Web App
-Eliza written in GO language as a web app, with a simple HTML/JS chat.
+Eliza chat bot written in GO language as a web app, with a simple HTML/JS chat.
 
 ### How to install and run GO
 
@@ -11,24 +11,46 @@ When the installation is done, the "go" command is going to be avaialable in ter
 
 To run any of the applications, navigate to the desired folder and type this command: 
 ```
-go build <name_of_go_file>
+go build 
 ```
 
 The previous command will compile the go file into a runnable.
 
 Once the runnable is created then it can be run in terminal, for example: 
 ```
-./<name_of_runnable>
+./Year-3-Eliza-web-app-in-GO.exe
 ```
 
 ## How it works
+### Webserver
+The webserver listens on port 8080. 
+The landing page is the index.html page from the www folder. 
+This page is the main chat window, which sends the messages to the server with AJAX.
+The AJAX request are sent to ```http://domain:8080/ajax/```which is not a real directory, whoever the program recognizes the path and begins the initialization of eliza. 
+### File structure
+```
+--www
+    --css
+        --index.css
+    --js
+        --index.js
+    --index.html
+```
+### AIML Parser
+The aiml parser is originally from https://github.com/eduardonunesp/goaiml
+I forked and tweaked this parser to work with my project.
+The modifications includes
+* Fix ```<star/>``` tag replaces
+* Fix recognition of ```<srai>``` tags
+
 ### Eliza
-Eliza "listens" at port 8080 and capable of communication through JSON with practically any other application throught the internet.
-Once eliza receives the "intitial_greetings" request it begins communication with the user.
-At the moment Eliza's main feature is not implemented, Therefore the only thing she says is "Well, tough luck, bye". This is going to be implemented in the near future.
+Once Eliza is initialized. It reads in the ```eliza.aiml``` which contains the the categories, patterns and templates for parsing the request and chosing a right answer. 
+The original file for Eliza is from https://github.com/massyn/ELIZA which I altered for better communication and also fixed issues with the ```<star/>``` tags.
+
 ### Simple chat
-The chat is a simple "window" in the broswer where the user can send a message to Eliza and eliza answers.
+The chat is a simple "window" in the broswer where the user can send a message to Eliza and she answers.
 It is written in HTML and JavaScript. The communication with Eliza is happening throgh AJAX calls which delivers JSON responses/request.
+
 
 
 #References

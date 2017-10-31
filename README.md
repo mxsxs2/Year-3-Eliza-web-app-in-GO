@@ -9,12 +9,20 @@ When the installation is done, the "go" command is going to be avaialable in ter
 
 ### How to use this repository
 
-To run any of the applications, navigate to the desired folder and type this command: 
+#### Get dependencies
+In order to be able to compile tha application the AIML parser package has to be downloaded.
+To download the AIML parser, run the following command:
+```
+go get github.com/mxsxs2/goaiml
+```
+This will download the package from github into ```$GOPATH\src\github.com\mxsxs2\goaiml```
+#### Build the application
+To build the application, navigate to the desired folder and type this command: 
 ```
 go build 
 ```
 
-The previous command will compile the go file into a runnable.
+The previous command will compile the go project into a runnable.
 
 Once the runnable is created then it can be run in terminal, for example: 
 ```

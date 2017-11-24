@@ -32,17 +32,15 @@ func isValidRequest(r *http.Request) bool {
 	return r.Body == nil
 }
 
-//Handler for serving the css and js locally
-func serveCSSandJS() {
+//Handler for serving the css,js adn images
+func serveResources() {
 	//Adapted from https://stackoverflow.com/questions/43601359/how-do-i-serve-css-and-js-in-go-lang
 	//Serve the css files
-	//http.HandleFunc("/css/", asd)
 	http.Handle("/css/", http.StripPrefix("/css", http.FileServer(http.Dir("./www/css"))))
 	//Serve the JavaScript files
 	http.Handle("/js/", http.StripPrefix("/js", http.FileServer(http.Dir("./www/js"))))
-}
-func asd(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("css", r.URL)
+
+	http.Handle("/img/", http.StripPrefix("/img", http.FileServer(http.Dir("./www/img"))))
 }
 
 //Handler for favicon
@@ -78,7 +76,7 @@ func main() {
 	//Add the handler function for the landing page
 	http.HandleFunc("/", landingPageHandler)
 	//Add bootstrap file handling
-	serveCSSandJS()
+	serveResources()
 	//Add the handler for serving the favicon
 	http.HandleFunc("/favicon.ico", serveFavicon)
 	//Add the handler for the ajax
@@ -86,5 +84,5 @@ func main() {
 	fmt.Println("Listen started on port 8080")
 	//Listen on port 8080
 	http.ListenAndServe(":8080", nil)
-	
+
 }

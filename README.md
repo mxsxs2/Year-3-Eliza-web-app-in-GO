@@ -68,3 +68,4 @@ It is written in HTML and JavaScript. The communication with Eliza is happening 
 * Simple webserver - https://github.com/mxsxs2/Go-Problem-set-Web-applications
 * JSON - https://blog.golang.org/json-and-go
 * Original Eliza AIML - https://github.com/massyn/ELIZA
+* Background picture - http://wlpapers.com/blurry-background.html

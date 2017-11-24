@@ -11,11 +11,11 @@ import (
 
 //Function used to initialize eliza
 func intializeEliza() (*goaiml.AIML, error) {
-	//Load the aim parser
+	//Load the aiml parser
 	aiml := goaiml.NewAIML()
 	//Load the aiml file aka Eliza in.
 	if err := aiml.Learn("eliza.aiml"); err != nil {
-		//If elize could not be loaded in for some reason
+		//If eliza could not be loaded in for some reason
 		return nil, errors.New("Eliza could not be loaded")
 	}
 	//Return nil on success
@@ -33,9 +33,7 @@ func processRequestWithBot(r *http.Request, bot *goaiml.AIML) Response {
 
 		//Check if the encode vas succesful
 		if err == nil {
-			if request.Question == "intitial_greetings" {
-				response.Answer = "What is bothering you again?"
-			} else if request.Question == "" {
+			if request.Question == "" {
 				response.Answer = "You should say/ask something"
 			} else {
 				//Get the answer from the bot and check if there was any errors

@@ -1,18 +1,24 @@
 body{
     background-color: #000;
+    background: url('/img/blurry-background-1.jpg');
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center;  
 }
 
 #messagesContainer::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
     border-radius: 5px;
-    background-color: #1E1E1E;
+    background-color: #2A385D;
+    opacity: 0.4;
 }
 
 #messagesContainer::-webkit-scrollbar
 {
 	width: 6px;
-	background-color: #1E1E1E;
+    background-color: #2A385D;
+    opacity: 0.4;
 }
 
 #messagesContainer::-webkit-scrollbar-thumb
@@ -36,17 +42,17 @@ body{
             border-color: 1px solid gray;
             padding:8px;
             margin:8px;
-            color: #fff;
+            color: #000;
         }
 
 .messageleft{
     float:left;
-    background-color:#383838;
+    background-color:#88BE9A;
 }
 
 .messageright{
     float:right;
-    background-color:#2D2D2D;
+    background-color:#C2C494;
 }
 
 #chatBottom{
@@ -61,11 +67,12 @@ body{
     #messageBox textarea{
         width:100%;
         height:100%;
-        background-color:#1E1E1E;
+        background-color: #2A385D;
         padding: 5px;
         color: #CCCCCC;
-        border:0px;
+        border: 0px;
         resize: none;
+        box-shadow: inset 1px 1px 20px #000;
 
     }
 

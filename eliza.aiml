@@ -17,6 +17,17 @@
 </category>
 
 <category>
+	<pattern>My name is *</pattern>
+	<template>
+		<random>
+			<li>Nice to meet you <set name="user"></set><star/></li>
+			<li>Hello <set name="user"></set><star/>, how are you?</li>
+		</random>
+	</template>
+</category>
+
+
+<category>
 	<pattern>SORRY *</pattern>
 	<template><srai>SORRY</srai></template>
 </category>
@@ -486,7 +497,6 @@
 			<li>Are you saying no just to be negative?</li>
 			<li>Does this make you feel unhappy?</li>
 			<li>Why not?</li>
-			<li>Why 'no'?</li>
 		</random>
 	</template>
 </category>
@@ -1157,6 +1167,15 @@
 	<pattern>* YOU *</pattern>
 	<template><srai>you <star/></srai></template>
 </category>
+
+<category>
+	<pattern>* YOU</pattern>
+	<template>
+		<random>
+			<li>I dont think <star/> me.</li>
+		</random>
+	</template>
+</category>
 <category>
 	<pattern>HELLO</pattern>
 	<template>
@@ -1188,39 +1207,10 @@
 </category>
 
 <category>
-	<pattern>YO</pattern>
-	<template><srai>hello</srai></template>
-</category>
-
-<category>
 	<pattern>HELLO *</pattern>
 	<template><srai>hello</srai></template>
 </category>
 
-<category>
-	<pattern>HI</pattern>
-	<template><srai>hello</srai></template>
-</category>
-
-<category>
-	<pattern>HOWDY</pattern>
-	<template><srai>hello</srai></template>
-</category>
-
-<category>
-	<pattern>HOLA</pattern>
-	<template><srai>hello</srai></template>
-</category>
-
-<category>
-	<pattern>HAI</pattern>
-	<template><srai>hello</srai></template>
-</category>
-
-<category>
-	<pattern>YO</pattern>
-	<template><srai>hello</srai></template>
-</category>
 <category>
 	<pattern>*</pattern>
 	<template>

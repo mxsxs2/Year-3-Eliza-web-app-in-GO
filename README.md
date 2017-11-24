@@ -53,8 +53,12 @@ The AJAX request are sent to ```http://domain:8080/ajax/```which is not a real d
 The aiml parser is originally from https://github.com/eduardonunesp/goaiml
 I forked and tweaked this parser to work with my project.
 The modifications includes
-* Fix ```<star/>``` tag replaces
+* Added comment for every statement to support better understanding of the library
+* ```processStar``` function now replaces every occurance of the ```<star/>``` tag in the templates before the random
+* Added reflection support to the ```<star/>``` tag
+* Added pre processor for better pattern matching
 * Fix recognition of ```<srai>``` tags
+
 #### How it works
 1. The parser loads in the AIML file on every request, which is helpful since the server does not have to be restarted if the AIML file is changed.
 2. When a request is sent to the parser it searches through the categories in the AIML file top to bottom.

@@ -1,5 +1,6 @@
 # Eliza Web App
 Eliza chat bot written in GO language as a web app, with a simple HTML/JS chat.
+The application is written for Data Representation module in year 3 of Software Development(2017) course at Galway Mayo Institute of Technology, Galway Campus. 
 
 ### How to install and run GO
 
@@ -28,13 +29,15 @@ Once the runnable is created then it can be run in terminal, for example:
 ```
 ./Year-3-Eliza-web-app-in-GO.exe
 ```
+##### When the port 8080 is taken
+If the port 8080 is taken, the application opens and closes straight away. The port has to be freed before the application starts.
 
 ## How it works
 ### Webserver
 The webserver listens on port 8080. 
 The landing page is the index.html page from the www folder. 
 This page is the main chat window, which sends the messages to the server with AJAX.
-The AJAX request are sent to ```http://domain:8080/ajax/```which is not a real directory, whoever the program recognizes the path and begins the initialization of eliza. 
+The AJAX request are sent to ```http://domain:8080/ajax/```which is not a real directory, however the program recognizes the path and begins the initialization of eliza. 
 ### File structure
 ```
 --www
@@ -42,6 +45,8 @@ The AJAX request are sent to ```http://domain:8080/ajax/```which is not a real d
         --index.css
     --js
         --index.js
+    --imga
+        --blurry-background-1.jpg
     --index.html
 ```
 ### AIML Parser
@@ -50,14 +55,21 @@ I forked and tweaked this parser to work with my project.
 The modifications includes
 * Fix ```<star/>``` tag replaces
 * Fix recognition of ```<srai>``` tags
+#### How it works
+1. The parser loads in the AIML file on every request, which is helpful since the server does not have to be restarted if the AIML file is changed.
+2. When a request is sent to the parser it searches through the categories in the AIML file top to bottom.
+3. Once match found the tags (srai,star,bot,set) are parsed.
+4. On a random tag the parser choses one item and returns back to the fucntion which called the AIML parser.
 
 ### Eliza
-Once Eliza is initialized. It reads in the ```eliza.aiml``` which contains the the categories, patterns and templates for parsing the request and chosing a right answer. 
+Once Eliza is initialized. It reads in the ```eliza.aiml``` which contains the categories, patterns and templates for parsing the request and chosing a right answer. 
 The original file for Eliza is from https://github.com/massyn/ELIZA which I altered for better communication and also fixed issues with the ```<star/>``` tags.
 
 ### Simple chat
-The chat is a simple "window" in the broswer where the user can send a message to Eliza and she answers.
-It is written in HTML and JavaScript. The communication with Eliza is happening throgh AJAX calls which delivers JSON responses/request.
+The chat is a simple "window" in the browser where the user can send a message to Eliza and she answers.
+It is written in HTML, CSS and JavaScript.
+I decided not to use any thrid party library for the CSS or JavaScript as the plain version of them shows better understanding of the given solution.(Definetely the XMLHttpRequest part.)
+The communication with Eliza is happening throgh AJAX calls which delivers JSON responses/request.
 
 
 

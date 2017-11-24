@@ -30,7 +30,7 @@ Once the runnable is created then it can be run in terminal, for example:
 ./Year-3-Eliza-web-app-in-GO.exe
 ```
 ##### When the port 8080 is taken
-If the port 8080 is taken, the application opens and closes straight away. The port has to be freed before the application starts.
+If the port 8080 is taken, the application opens and closes straight away with an error message. The port has to be freed before the application starts.
 
 ## How it works
 ### Webserver

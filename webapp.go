@@ -83,6 +83,8 @@ func main() {
 	http.HandleFunc("/ajax/", ajaxHandler)
 	fmt.Println("Listen started on port 8080")
 	//Listen on port 8080
-	http.ListenAndServe(":8080", nil)
+	err := http.ListenAndServe(":8080", nil)
+	//Write out the error
+	fmt.Println(err)
 
 }
